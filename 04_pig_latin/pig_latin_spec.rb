@@ -69,4 +69,13 @@ describe "#translate" do
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
+  it "ensures that originally capitalized words are still capitalized, with a different intial capital" do
+    s = translate("They Are Fat")
+    expect(s).to eq("Eythay Areay Atfay")
+  end
+
+  it "retain punctuation from the original phrase" do
+    s = translate("I am funny, smart and charming. I am the greatest!")
+    expect(s).to eq ("Iay amay unnyfay, artsmay anday armingchay. Iay amay ethay eatestgray!")
+  end
 end
